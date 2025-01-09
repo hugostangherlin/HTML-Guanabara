@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias HTML5</title>
+</head>
+<body>
+    <!-- Fazer exercício de imagem dinãmica para varias tipos de imagem. Editamos no GIMP 3 imagens com tamanhos diferentes(300px,700px,1000px) e salvamos na mesma pasta do codigo para facil de manipular os arquivos dentro do VSCODE -->
+    
+    <h1>Imagens Dinâmicas</h1>
+    <P>Abra estas imagens dinâmicas em dispositivos diferentes ou aumenta e diminue o tamanho do seu navegador</P>
+    
+    <picture>
+        <!-- CUIDADO! Quando se utilizar da tag <source> deve estar por ordem de tamanho, no caso vem P por primeiro, depois M e finalizando com G. -->
+        <source media="(max-width:750 )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="Imagem flexivel">
+        <!-- Abrimos a tag <picture> para indicar pra uma imagem está por vir, nela usamos a tag básica de imagem(<img src) digita CTRL + espaço para selecionar qual pasta/imagem vamos usar e noeamos elas como "Imagem Flexivel" -->
+            <!-- Descobrimos uma nova tag chamada <source> para definir a largura de imagem entre maxima e minima. No exercicio indicamos o padrão maximo,1000px, mas se o navegador tiver menos de 1000px vai carregar a foto tamanho M indicado pelo tag "srcset=imagens(pasta)/foto-m.png(nome do arquivo)" -->
+
+    </picture>
+</body>
+</html>
